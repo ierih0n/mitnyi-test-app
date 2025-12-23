@@ -1,0 +1,97 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Custom styles for answer feedback */
+.list-group-item.list-group-item-success {
+  color: white !important;
+  background-color: #28a745 !important; /* Bootstrap's default success green */
+  border-color: #23923d !important;
+}
+
+.list-group-item.list-group-item-danger {
+  color: white !important;
+  background-color: #dc3545 !important; /* Bootstrap's default danger red */
+  border-color: #c82333 !important;
+}
+
+/* Ensure text color is overridden when button is active/focused */
+.list-group-item.list-group-item-success:focus,
+.list-group-item.list-group-item-success.active {
+  color: white !important;
+  background-color: #218838 !important;
+}
+
+.list-group-item.list-group-item-danger:focus,
+.list-group-item.list-group-item-danger.active {
+  color: white !important;
+  background-color: #c82333 !important;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .App.container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  h1.my-4 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .question-container.card, .results-container.card {
+    padding: 1.5rem !important;
+  }
+
+  .question-container h3 {
+    font-size: 1.25rem;
+  }
+
+  .list-group-item {
+    font-size: 0.9rem;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+  }
+}
