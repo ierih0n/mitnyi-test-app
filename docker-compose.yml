@@ -6,7 +6,7 @@ services:
     ports:
       - "3001:3001"
     volumes:
-      - ./data.json:/usr/src/app/data.json
+      - ./backend/data.json:/usr/src/app/data.json
       - ./backend/users.json:/usr/src/app/users.json
 
   frontend:
