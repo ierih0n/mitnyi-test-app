@@ -22,13 +22,11 @@ FROM nginx:stable-alpine
 # Copy the build output to replace the default Nginx public folder
 COPY --from=build /app/build /usr/share/nginx/html
 
-# Copy the nginx config file and startup script
+# Copy the nginx config file
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY startup.sh /startup.sh
-RUN chmod +x /startup.sh
 
 # Expose port 80
 EXPOSE 80
 
-# Start Nginx using the startup script
-CMD ["/startup.sh"]
+# Start Nginx
+CMD ["nginx", "-g", "daemon off;"]
